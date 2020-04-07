@@ -2,8 +2,8 @@
 An SCP:SL EXILED Plugin that grants you SCP-207 speed!
 
 Drop it in the following places (depending on your operating system) and dodge SCP's without worrying about health drains!
-%appdata%/Roaming/Plugins (Windows)
-~/.config/Plugins (Linux)
+- %appdata%/Roaming/Plugins (Windows)
+- ~/.config/Plugins (Linux)
 
 Config Variables:
 - slightlyfasterspeed_enable: (true or false)
