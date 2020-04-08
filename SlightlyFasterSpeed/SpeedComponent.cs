@@ -13,7 +13,7 @@ namespace SlightlyFasterSpeed
         public ReferenceHub Hub;
         public void Awake()
         {
-            Hub = GetComponent<ReferenceHub>();
+            Hub = gameObject.GetPlayer();
             Scp207 = Hub.effectsController.GetEffect<Scp207>("SCP-207");
             Scp207.ServerEnable();
             Events.PlayerHurtEvent += RunWhenPlayerIsHurt;
