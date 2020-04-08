@@ -29,7 +29,7 @@ namespace SlightlyFasterSpeed
 
         public void RunWhenPlayerIsHurt(ref PlayerHurtEvent plyHurt)
         {
-            if (plyHurt.DamageType == DamageTypes.Scp207)
+            if (plyHurt.Player == Hub && plyHurt.DamageType == DamageTypes.Scp207)
                 plyHurt.Amount = 0;
         }
     }
