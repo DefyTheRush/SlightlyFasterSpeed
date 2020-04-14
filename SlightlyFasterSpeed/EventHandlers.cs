@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using EXILED;
 using EXILED.Extensions;
@@ -31,13 +31,8 @@ namespace SlightlyFasterSpeed
                             return;
                         }
 
-                        ReferenceHub ChosenPlayer = new ReferenceHub();
-                        foreach (ReferenceHub hub in Player.GetHubs())
-                            if (hub.GetPlayerId() == Int32.Parse(Arguments[1]))
-                                ChosenPlayer = hub;
-
-                        SpeedComponent speedGiver = ChosenPlayer.GetComponent<SpeedComponent>();
-                        if (speedGiver == null)
+                        ReferenceHub ChosenPlayer = Player.GetPlayer(Int32.Parse(Arguments[1]));
+                        if (!ChosenPlayer.TryGetComponent(out SpeedComponent spd))
                         {
                             Rcom.Sender.RAMessage("Faster speed enabled for player \"" + ChosenPlayer.GetNickname() + "\"!");
                             PlayersWith207.Add(ChosenPlayer);
